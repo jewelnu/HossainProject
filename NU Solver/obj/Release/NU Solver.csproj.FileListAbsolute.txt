@@ -59,3 +59,6 @@ E:\NU Solver\NU Solver\obj\Release\NU_Solver.upload.resources
 E:\NU Solver\NU Solver\obj\Release\NU Solver.csproj.GenerateResource.Cache
 E:\NU Solver\NU Solver\obj\Release\NU Solver.exe
 E:\NU Solver\NU Solver\obj\Release\NU Solver.pdb
+E:\GitProject\HossainProject\NU Solver\bin\Release\NU Solver.exe.config
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU Solver.exe
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU Solver.pdb
