@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Text;
 using System.Windows.Forms;
 
-
+//test message
 namespace NU_Solver
 {
     class Database
