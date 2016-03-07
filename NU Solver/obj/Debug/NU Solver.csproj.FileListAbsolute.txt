@@ -1,0 +1,48 @@
+D:\Solve\NU Solver\NU Solver\bin\Debug\NU Solver.exe
+D:\Solve\NU Solver\NU Solver\bin\Debug\NU Solver.pdb
+D:\Solve\NU Solver\NU Solver\obj\Debug\NU_Solver.login.resources
+D:\Solve\NU Solver\NU Solver\obj\Debug\NU_Solver.Properties.Resources.resources
+D:\Solve\NU Solver\NU Solver\obj\Debug\NU Solver.csproj.GenerateResource.Cache
+D:\Solve\NU Solver\NU Solver\obj\Debug\NU Solver.exe
+D:\Solve\NU Solver\NU Solver\obj\Debug\NU Solver.pdb
+D:\Solve\NU Solver\NU Solver\obj\Debug\NU Solver.csprojResolveAssemblyReference.cache
+D:\Solve\NU Solver\NU Solver\obj\Debug\NU_Solver.File_List.resources
+D:\Solve\NU Solver\NU Solver\obj\Debug\NU_Solver.SolveWindow.resources
+F:\C#\Solve\NU Solver\NU Solver\obj\Debug\NU Solver.exe
+F:\C#\Solve\NU Solver\NU Solver\obj\Debug\NU Solver.pdb
+F:\C#\Solve\NU Solver\NU Solver\bin\Debug\NU Solver.exe
+F:\C#\Solve\NU Solver\NU Solver\bin\Debug\NU Solver.pdb
+F:\C#\Solve\NU Solver\NU Solver\bin\Debug\System.Data.dll
+F:\C#\Solve\NU Solver\NU Solver\bin\Debug\System.Deployment.dll
+F:\C#\Solve\NU Solver\NU Solver\bin\Debug\System.dll
+F:\C#\Solve\NU Solver\NU Solver\bin\Debug\System.Drawing.dll
+F:\C#\Solve\NU Solver\NU Solver\bin\Debug\System.Windows.Forms.dll
+F:\C#\Solve\NU Solver\NU Solver\bin\Debug\System.Xml.dll
+F:\C#\Solve\NU Solver\NU Solver\obj\Debug\NU Solver.csprojResolveAssemblyReference.cache
+F:\C#\Solve\NU Solver\NU Solver\obj\Debug\NU_Solver.E_solve.resources
+F:\C#\Solve\NU Solver\NU Solver\obj\Debug\NU_Solver.File_List.resources
+F:\C#\Solve\NU Solver\NU Solver\obj\Debug\NU_Solver.LithoCorrection.resources
+F:\C#\Solve\NU Solver\NU Solver\obj\Debug\NU_Solver.SolveWindow.resources
+F:\C#\Solve\NU Solver\NU Solver\obj\Debug\NU_Solver.login.resources
+F:\C#\Solve\NU Solver\NU Solver\obj\Debug\NU_Solver.Properties.Resources.resources
+F:\C#\Solve\NU Solver\NU Solver\obj\Debug\NU_Solver.upload.resources
+F:\C#\Solve\NU Solver\NU Solver\obj\Debug\NU Solver.csproj.GenerateResource.Cache
+F:\C#\NU Solver\NU Solver\obj\Debug\NU Solver.exe
+F:\C#\NU Solver\NU Solver\obj\Debug\NU Solver.pdb
+F:\C#\NU Solver\NU Solver\bin\Debug\NU Solver.exe
+F:\C#\NU Solver\NU Solver\bin\Debug\NU Solver.pdb
+F:\C#\NU Solver\NU Solver\bin\Debug\System.Data.dll
+F:\C#\NU Solver\NU Solver\bin\Debug\System.Deployment.dll
+F:\C#\NU Solver\NU Solver\bin\Debug\System.dll
+F:\C#\NU Solver\NU Solver\bin\Debug\System.Drawing.dll
+F:\C#\NU Solver\NU Solver\bin\Debug\System.Windows.Forms.dll
+F:\C#\NU Solver\NU Solver\bin\Debug\System.Xml.dll
+F:\C#\NU Solver\NU Solver\obj\Debug\NU Solver.csprojResolveAssemblyReference.cache
+F:\C#\NU Solver\NU Solver\obj\Debug\NU_Solver.E_solve.resources
+F:\C#\NU Solver\NU Solver\obj\Debug\NU_Solver.File_List.resources
+F:\C#\NU Solver\NU Solver\obj\Debug\NU_Solver.LithoCorrection.resources
+F:\C#\NU Solver\NU Solver\obj\Debug\NU_Solver.SolveWindow.resources
+F:\C#\NU Solver\NU Solver\obj\Debug\NU_Solver.login.resources
+F:\C#\NU Solver\NU Solver\obj\Debug\NU_Solver.Properties.Resources.resources
+F:\C#\NU Solver\NU Solver\obj\Debug\NU_Solver.upload.resources
+F:\C#\NU Solver\NU Solver\obj\Debug\NU Solver.csproj.GenerateResource.Cache
