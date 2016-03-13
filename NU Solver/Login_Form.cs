@@ -54,8 +54,11 @@ namespace NU_Solver
                     }
                     else if (reader["status"].ToString() == "uploader")
                     {
-                        upload upload_frm = new upload();
-                        upload_frm.Show();
+                        adesboard ad=new adesboard();
+                        ad.Show();
+                        //upload upload_frm = new upload();
+                        //upload_frm.Show();
+                        
                         this.Hide();
                         return;
                     }

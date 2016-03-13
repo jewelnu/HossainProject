@@ -19,9 +19,11 @@ namespace NU_Solver
                 //cn.ConnectionString = @"Data Source=sazzad-ap;User id=solver;Password=`1qazxsw23edc;";
                 //@"Server=BILLAL-PC\SQLEXPRESS;Initial Catalog=test;Integrated Security=True;
                 //Data Source=192.168.0.31;Initial Catalog = nuslvdb; User ID = sa; Password = 123;
-                cn.ConnectionString = @"Data Source=192.168.0.122;Initial Catalog = nuslvdb; User ID = common; Password = billal;";
+                
+                //cn.ConnectionString = @"Data Source=192.168.0.122;Initial Catalog = nuslvdb; User ID = common; Password = billal;";
 
-                //cn.ConnectionString = @"Data Source=192.168.0.31;Initial Catalog = nuslvdb; User ID = sa; Password = 123;";
+                cn.ConnectionString = @"Data Source=192.168.0.31;Initial Catalog = nuslvdb; User ID = sa; Password = 123;";
+
                 //cn.ConnectionString = @"Server=BILLAL-PC\SQLEXPRESS;Initial Catalog=nuslvdb;Integrated Security=True;";
                 //cn.ConnectionString = @"Server=192.168.0.31;Initial Catalog=nuslvdb;Integrated Security=True;";
                 cn.Open();

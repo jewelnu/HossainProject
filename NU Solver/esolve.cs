@@ -10,11 +10,28 @@ using System.Text.RegularExpressions;
 
 namespace NU_Solver
 {
-    class esolve
+    class esolve 
     {
         public string username = "";
         public string filename = "";
         public string sub_code = "";
+        public esolve()
+        {
+            
+        }
+        public esolve(string filename, string sub_code)
+        {
+            this.filename = filename;
+            this.sub_code = sub_code;
+            //this.username = username;
+        }
+        public esolve(string filename, string sub_code, string username)
+        {
+            this.filename = filename;
+            this.sub_code = sub_code;
+            this.username = username;
+        }
+
         public void espan(string filename, string sub_code, string username)
         {
             this.filename = filename;
@@ -28,6 +45,10 @@ namespace NU_Solver
                     MessageBox.Show("Connection Problem!");
                     return;
                 }
+                plswait pw = new plswait();
+                pw.Show();
+                pw.Refresh();
+
                 SqlCommand cmd = new SqlCommand("", con);
                 cmd.CommandText = string.Format("SELECT id, scanned_row, file_name FROM dbo.E_solving WHERE file_name = '{0}' order by id", filename);
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -73,6 +94,7 @@ namespace NU_Solver
                     {
                     }
                     //MessageBox.Show(affectedRow.ToString()+" rows affected for id "+ id.ToString());
+                    pw.Refresh();
                 }
                 //file span status update to file list
                 
@@ -86,7 +108,7 @@ namespace NU_Solver
                 catch (Exception E)
                 {
                 }
-
+                pw.Close();
                 reader.Dispose();
             }
             catch (Exception ee)

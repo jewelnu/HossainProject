@@ -57,7 +57,7 @@ namespace NU_Solver
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new NU_Solver.myDataGridView();
             this.btnChangePassword = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -145,7 +145,7 @@ namespace NU_Solver
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.lbl_current_user);
@@ -212,7 +212,7 @@ namespace NU_Solver
             // 
             this.btnAllError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAllError.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnAllError.Location = new System.Drawing.Point(1083, 329);
+            this.btnAllError.Location = new System.Drawing.Point(1083, 336);
             this.btnAllError.Name = "btnAllError";
             this.btnAllError.Size = new System.Drawing.Size(136, 33);
             this.btnAllError.TabIndex = 10;
@@ -224,7 +224,7 @@ namespace NU_Solver
             // 
             this.btnNextError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNextError.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnNextError.Location = new System.Drawing.Point(1083, 369);
+            this.btnNextError.Location = new System.Drawing.Point(1083, 376);
             this.btnNextError.Name = "btnNextError";
             this.btnNextError.Size = new System.Drawing.Size(136, 33);
             this.btnNextError.TabIndex = 11;
@@ -236,7 +236,7 @@ namespace NU_Solver
             // 
             this.btnShowError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowError.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnShowError.Location = new System.Drawing.Point(1083, 409);
+            this.btnShowError.Location = new System.Drawing.Point(1083, 416);
             this.btnShowError.Name = "btnShowError";
             this.btnShowError.Size = new System.Drawing.Size(136, 33);
             this.btnShowError.TabIndex = 12;
@@ -248,7 +248,7 @@ namespace NU_Solver
             // 
             this.btnReleaseFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReleaseFile.ForeColor = System.Drawing.Color.Indigo;
-            this.btnReleaseFile.Location = new System.Drawing.Point(1083, 499);
+            this.btnReleaseFile.Location = new System.Drawing.Point(1083, 516);
             this.btnReleaseFile.Name = "btnReleaseFile";
             this.btnReleaseFile.Size = new System.Drawing.Size(136, 33);
             this.btnReleaseFile.TabIndex = 13;
@@ -260,7 +260,7 @@ namespace NU_Solver
             // 
             this.btnFinishPost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinishPost.ForeColor = System.Drawing.Color.Indigo;
-            this.btnFinishPost.Location = new System.Drawing.Point(1083, 539);
+            this.btnFinishPost.Location = new System.Drawing.Point(1083, 556);
             this.btnFinishPost.Name = "btnFinishPost";
             this.btnFinishPost.Size = new System.Drawing.Size(136, 33);
             this.btnFinishPost.TabIndex = 14;
@@ -272,7 +272,7 @@ namespace NU_Solver
             // 
             this.btnReplaceSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReplaceSubject.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnReplaceSubject.Location = new System.Drawing.Point(1084, 448);
+            this.btnReplaceSubject.Location = new System.Drawing.Point(1084, 455);
             this.btnReplaceSubject.Name = "btnReplaceSubject";
             this.btnReplaceSubject.Size = new System.Drawing.Size(136, 33);
             this.btnReplaceSubject.TabIndex = 15;
@@ -350,7 +350,7 @@ namespace NU_Solver
             // btnChangePassword
             // 
             this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePassword.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnChangePassword.ForeColor = System.Drawing.Color.Maroon;
             this.btnChangePassword.Location = new System.Drawing.Point(1084, 620);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(136, 33);
@@ -359,22 +359,23 @@ namespace NU_Solver
             this.btnChangePassword.UseVisualStyleBackColor = true;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
-            // button1
+            // btnRefresh
             // 
-            this.button1.Location = new System.Drawing.Point(1139, 271);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(1084, 270);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(135, 34);
+            this.btnRefresh.TabIndex = 20;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // E_solve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 740);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.lblCurrentRecord);
             this.Controls.Add(this.label6);
@@ -446,7 +447,7 @@ namespace NU_Solver
         private Button btnChangePassword;
         private Label label8;
         private Label label7;
-        private Button button1;// = new myDataGridView();
+        private Button btnRefresh;// = new myDataGridView();
     }
     class myDataGridView : System.Windows.Forms.DataGridView
     {

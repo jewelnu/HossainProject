@@ -52,9 +52,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(596, 12);
+            this.button1.Location = new System.Drawing.Point(230, 39);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(384, 41);
+            this.button1.Size = new System.Drawing.Size(98, 41);
             this.button1.TabIndex = 0;
             this.button1.Text = "&Upload Files";
             this.button1.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(248, 12);
+            this.label1.Location = new System.Drawing.Point(234, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(317, 13);
             this.label1.TabIndex = 1;
@@ -80,7 +80,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(593, 67);
+            this.label2.Location = new System.Drawing.Point(343, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 4;
@@ -169,13 +169,13 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "&Span Files";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button2.Click += new System.EventHandler(this.btnSpan_Click_1);
             // 
             // progressBar2
             // 
             this.progressBar2.Location = new System.Drawing.Point(519, 441);
             this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(263, 10);
+            this.progressBar2.Size = new System.Drawing.Size(366, 10);
             this.progressBar2.TabIndex = 13;
             // 
             // lblspanfile

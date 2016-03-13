@@ -31,6 +31,9 @@ namespace NU_Solver
             //this.Hide();
             //loadFreeFiles();
             file_load_listview();
+            listView1.Focus();
+            this.Refresh();
+
         }
         private void file_list_closed(object sender, FormClosedEventArgs e)
         {
@@ -40,33 +43,6 @@ namespace NU_Solver
         {
             if (MessageBox.Show("Are you really want to Exit?", "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
                 e.Cancel = true;            
-        }
-        public void loadFreeFiles(){
-            try
-            {
-                SqlConnection con = Database.GetConnectionObj();
-                if (con == null) throw new Exception("Can't create and open a connection");
-                SqlCommand cmd = new SqlCommand("", con);
-                //username = tb_username.Text.ToString();
-                //password = tb_password.Text.ToString();
-
-                cmd.CommandText = "SELECT dbo.file_list.file_name,rows,file_size FROM dbo.file_list WHERE dbo.file_list.solver_name IS NULL OR dbo.file_list.solver_name = '__NONE'";
-                //cmd.CommandText = "SELECT dbo.file_list.file_name FROM dbo.file_list";
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    //this.file_list_box.Items.Add(reader[0].ToString());
-                    this.file_list_box.Items.Add(reader[0].ToString() + "      " + (reader[1].ToString()) + "      " + (reader[2].ToString()));
-                }
-                reader.Dispose();
-                con.Close();
-                con.Dispose();
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show("Database error.\n" + ee.StackTrace.ToString());
-                Application.Exit();
-            }
         }
         public bool getAccess(string filename)
         {
@@ -166,7 +142,7 @@ namespace NU_Solver
                 SqlConnection con = Database.GetConnectionObj();
                 if (con == null) throw new Exception("Connection failed! Please try again.");
 
-                SqlDataAdapter ada =new SqlDataAdapter("SELECT * FROM dbo.file_list WHERE dbo.file_list.solver_name IS NULL OR dbo.file_list.solver_name = '__NONE'",con);
+                SqlDataAdapter ada = new SqlDataAdapter("SELECT * FROM dbo.file_list WHERE (dbo.file_list.solver_name IS NULL OR dbo.file_list.solver_name = '__NONE') AND span_stat='T'", con);
                 DataTable dt = new DataTable();
                 ada.Fill(dt);
                 for (int i = 0; i < dt.Rows.Count; i++)
@@ -181,6 +157,7 @@ namespace NU_Solver
                 dt.Dispose();
                 con.Close();
                 con.Dispose();
+                
             }
             catch (Exception ee)
             {
@@ -191,6 +168,11 @@ namespace NU_Solver
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void File_List_Load(object sender, EventArgs e)
         {
 
         }

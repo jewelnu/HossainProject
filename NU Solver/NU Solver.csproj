@@ -54,12 +54,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adesboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adesboard.Designer.cs">
+      <DependentUpon>adesboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="changepassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="changepassword.Designer.cs">
       <DependentUpon>changepassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\common.cs" />
+    <Compile Include="DAO\file_list.cs" />
+    <Compile Include="DAO\user_info.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="dbbase.cs" />
     <Compile Include="esolve.cs" />
@@ -74,6 +83,12 @@
     </Compile>
     <Compile Include="LithoCorrection.Designer.cs">
       <DependentUpon>LithoCorrection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="plswait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plswait.Designer.cs">
+      <DependentUpon>plswait.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -118,6 +133,9 @@
     <Compile Include="upload.Designer.cs">
       <DependentUpon>upload.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="adesboard.resx">
+      <DependentUpon>adesboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="changepassword.resx">
       <DependentUpon>changepassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LithoCorrection.resx">
       <DependentUpon>LithoCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plswait.resx">
+      <DependentUpon>plswait.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sifview.resx">
       <DependentUpon>sifview.cs</DependentUpon>
@@ -182,6 +203,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TEM spinner.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blist.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

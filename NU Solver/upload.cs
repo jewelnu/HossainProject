@@ -31,7 +31,9 @@ namespace NU_Solver
             for (int i = 0; i < dr.GetFiles().Length; i++)
             {
                 //this.listBox1.Items.Add(dr.GetFiles()[i].Name);
-                
+                plswait pw = new plswait();
+                pw.Show(); //show wait message
+                pw.Refresh();
                 uploadfile(dr.GetFiles()[i].Name);
                 
                 progressBar1.Maximum = dr.GetFiles().Length;
@@ -41,11 +43,14 @@ namespace NU_Solver
                     progressBar1.Value++;
                 }
                 this.Refresh();
+                
+                pw.Close(); //close wait message
             }
             file_load_listview();
             label2.Text = "Finished...";
             MessageBox.Show("File(s) upload finished","Upload", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //this.Close();
+            button2.Focus();
         }
         private void uploadfile(string filename)
         {
@@ -237,26 +242,28 @@ namespace NU_Solver
             }            
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void btnSpan_Click_1(object sender, EventArgs e)
         {
             try
             {
                 SqlConnection con = Database.GetConnectionObj();
                 if (con == null) throw new Exception("Can't create and open a connection");
                 SqlCommand cmd = new SqlCommand("", con);
-                
-                //cmd.CommandText = ("SELECT file_name, pap_code FROM dbo.file_list WHERE span_stat is null OR span_stat=''");
-                cmd.CommandText = ("SELECT file_name, pap_code, rows FROM dbo.file_list");
-                //MessageBox.Show(cmd.CommandText);
-                int cnt=6;
-                
-                //progressBar2.Maximum = cnt;
 
-                SqlDataReader reader = cmd.ExecuteReader();
-                
+                //no of row count
+                SqlCommand norow = new SqlCommand("SELECT count(*) FROM dbo.file_list WHERE span_stat is null OR span_stat=''", con);
+                int cnt = 0;
+                //con.Open();
+                //cnt = norow.ExecuteNonQuery();
+                cnt = (int) norow.ExecuteScalar();
+                if (cnt == 0)
+                {
+                    MessageBox.Show("Not available file(s) for span!","Span message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
                 progressBar2.Maximum = cnt;
-                //MessageBox.Show(cnt.ToString());
-                
+
+                cmd.CommandText = ("SELECT file_name, pap_code, rows,span_stat FROM dbo.file_list where span_stat is null OR span_stat=''");
+                SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     string sub_code = "";
@@ -268,6 +275,7 @@ namespace NU_Solver
                     
                     //to span file
                     lblspanfile.Text = filename;
+                    this.Refresh();
                     esolve es = new esolve();
                     es.espan(filename, sub_code, "");
                     //cnt++;
@@ -283,11 +291,12 @@ namespace NU_Solver
                 reader.Dispose();
                 con.Close();
                 con.Dispose();
-                MessageBox.Show("Span completed!");
+                MessageBox.Show("Span completed!","Span Message", MessageBoxButtons.OK, MessageBoxIcon.Information );
+                button3.Focus();
             }
             catch (Exception ee)
             {
-                MessageBox.Show("Database error.\n" + ee.StackTrace.ToString());
+                MessageBox.Show("Database error.\n" + ee.StackTrace.ToString(),"Error Message", MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
                 Application.Exit();
             }
            
@@ -301,6 +310,19 @@ namespace NU_Solver
                 listView1.View = View.Details;
                 SqlConnection con = Database.GetConnectionObj();
                 if (con == null) throw new Exception("Connection failed! Please try again.");
+
+                //no of row count
+                SqlCommand norow = new SqlCommand("SELECT count(*) FROM dbo.file_list WHERE span_stat is null OR span_stat=''", con);
+                int cnt = 0;
+                //con.Open();
+                //cnt = norow.ExecuteNonQuery();
+                cnt = (int)norow.ExecuteScalar();
+                if (cnt == 0)
+                {
+                    //MessageBox.Show("Not available file(s) for span!", "Span message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    button2.Enabled = false;
+                }
+
 
                 SqlDataAdapter ada = new SqlDataAdapter("SELECT * FROM dbo.file_list", con);
                 DataTable dt = new DataTable();
@@ -333,7 +355,10 @@ namespace NU_Solver
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            adesboard ad = new adesboard();
+            ad.Show();
+            this.Hide();
+            //Application.Exit();
         }
             
     }

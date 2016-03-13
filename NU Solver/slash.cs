@@ -23,6 +23,7 @@ namespace NU_Solver
             progressBar1.Maximum = 10;
             timer1.Tick += new EventHandler(timer1_Tick);
             lblStatus.Text = "Loading...";
+            
         }
         void timer1_Tick(object sender, EventArgs e)
         {
@@ -41,12 +42,17 @@ namespace NU_Solver
             {
             
                 timer1.Stop();
-                //display mainform
-                login mf = new login();
-                mf.Show();
-                //hide this form
-                this.Hide();
+                if (progressBar1.Value == 10)
+                {
+                    //display mainform
+                    login mf = new login();
+                    mf.Show();
+                    //hide this form
+                    this.Hide();
+                    progressBar1.Value = 0;
+                }
             }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

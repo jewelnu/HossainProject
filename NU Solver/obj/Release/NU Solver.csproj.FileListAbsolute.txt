@@ -60,5 +60,27 @@ E:\NU Solver\NU Solver\obj\Release\NU Solver.csproj.GenerateResource.Cache
 E:\NU Solver\NU Solver\obj\Release\NU Solver.exe
 E:\NU Solver\NU Solver\obj\Release\NU Solver.pdb
 E:\GitProject\HossainProject\NU Solver\bin\Release\NU Solver.exe.config
+E:\GitProject\HossainProject\NU Solver\bin\Release\NU Solver.exe
+E:\GitProject\HossainProject\NU Solver\bin\Release\NU Solver.pdb
+E:\GitProject\HossainProject\NU Solver\bin\Release\System.Data.dll
+E:\GitProject\HossainProject\NU Solver\bin\Release\System.Deployment.dll
+E:\GitProject\HossainProject\NU Solver\bin\Release\System.dll
+E:\GitProject\HossainProject\NU Solver\bin\Release\System.Drawing.dll
+E:\GitProject\HossainProject\NU Solver\bin\Release\System.Windows.Forms.dll
+E:\GitProject\HossainProject\NU Solver\bin\Release\System.Xml.dll
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU_Solver.changepassword.resources
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU_Solver.E_solve.resources
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU_Solver.File_List.resources
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU_Solver.LithoCorrection.resources
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU_Solver.plswait.resources
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU_Solver.sifview.resources
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU_Solver.slash.resources
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU_Solver.SolveWindow.resources
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU_Solver.login.resources
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU_Solver.Properties.Resources.resources
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU_Solver.upload.resources
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU Solver.csproj.GenerateResource.Cache
 E:\GitProject\HossainProject\NU Solver\obj\Release\NU Solver.exe
 E:\GitProject\HossainProject\NU Solver\obj\Release\NU Solver.pdb
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU Solver.csprojResolveAssemblyReference.cache
+E:\GitProject\HossainProject\NU Solver\obj\Release\NU_Solver.adesboard.resources
