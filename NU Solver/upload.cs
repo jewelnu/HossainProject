@@ -31,9 +31,7 @@ namespace NU_Solver
             for (int i = 0; i < dr.GetFiles().Length; i++)
             {
                 //this.listBox1.Items.Add(dr.GetFiles()[i].Name);
-                plswait pw = new plswait();
-                pw.Show(); //show wait message
-                pw.Refresh();
+                
                 uploadfile(dr.GetFiles()[i].Name);
                 
                 progressBar1.Maximum = dr.GetFiles().Length;
@@ -42,14 +40,17 @@ namespace NU_Solver
                 {
                     progressBar1.Value++;
                 }
+                
                 this.Refresh();
                 
-                pw.Close(); //close wait message
+                
             }
             file_load_listview();
+            
             label2.Text = "Finished...";
             MessageBox.Show("File(s) upload finished","Upload", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //this.Close();
+
             button2.Focus();
         }
         private void uploadfile(string filename)
@@ -74,6 +75,7 @@ namespace NU_Solver
             //return;
             try
             {
+                plswait pw=new plswait();
                 SqlConnection con = Database.GetConnectionObj();
                 if (con == null) throw new Exception("Can't create and open a connection");
                 SqlCommand cmd = new SqlCommand(filename_insert, con);
@@ -87,6 +89,7 @@ namespace NU_Solver
                 int sl = 0;
                 while (sr.EndOfStream == false)
                 {
+                    pw.Show();
                     sl++;
                     string line = sr.ReadLine();
                     //sl = Int32.Parse(line.Substring(0,10));
@@ -98,6 +101,7 @@ namespace NU_Solver
                         filename, line, sl);
                         //richTextBox1.AppendText(filename);
 
+                    pw.Refresh();
 
                     //esolve es=new esolve();
                     //espan(string username, string filename, string sub_code)
@@ -127,9 +131,11 @@ namespace NU_Solver
                     StreamWriter lg = new StreamWriter("log.log");
                     lg.Write(this.richTextBox1.Text.ToString());
                     lg.Dispose();
+                    
                 }
                 sr.Dispose();
                 //con2.Close();
+                pw.Close();
                 con.Close();
                 con.Dispose();
             }

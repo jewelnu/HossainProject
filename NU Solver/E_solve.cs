@@ -12,7 +12,6 @@ using System.Windows.Forms;
 
 namespace NU_Solver
 {
-    
     public partial class E_solve : Form
     {
         public string filename = "";
@@ -86,18 +85,6 @@ namespace NU_Solver
                 this.dataGridView1.Columns[9].Width = 6;
                 //this.dataGridView1.Columns[10].Width = 6;
                 this.dataGridView1.Columns[10].Visible = false;
-                //this.dataGridView1.Columns[1].Width = 60;
-                ////this.dataGridView1.Columns[2].Width = 70;
-                //this.dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                //this.dataGridView1.Columns[3].Width = 70;
-                //this.dataGridView1.Columns[4].Width = 90;
-                //this.dataGridView1.Columns[5].Width = 150;
-                //this.dataGridView1.Columns[6].Width = 6;
-                //this.dataGridView1.Columns[7].Width = 180;
-                //this.dataGridView1.Columns[8].Width = 40;
-                //this.dataGridView1.Columns[9].Width = 403;
-                //this.dataGridView1.Columns[10].Width = 6;
-                //tot_row=Convert.ToInt32((DataGridViewTextBoxColumn)this.dataGridView1.Columns[1]);
                 DataGridViewTextBoxColumn exam_code = (DataGridViewTextBoxColumn)this.dataGridView1.Columns[3];
                 exam_code.MaxInputLength = 3;
                 DataGridViewTextBoxColumn sub_code = (DataGridViewTextBoxColumn)this.dataGridView1.Columns[4];
@@ -187,11 +174,11 @@ namespace NU_Solver
                 GoToNextError();
                 e.Handled = true;
             }
-            else if (e.KeyChar == '/')
-            {
-                finish();
-                e.Handled = true;
-            }
+            //else if (e.KeyChar == '/')
+            //{
+            //    finish();
+            //    e.Handled = true;
+            //}
             else if (e.KeyChar == 'r' || e.KeyChar == 'R')
             {
                 relese();
@@ -349,7 +336,9 @@ namespace NU_Solver
                     SqlConnection con = Database.GetConnectionObj();
                     if (con == null) throw new Exception("Can't create and open a connection");
                     SqlCommand cmd = new SqlCommand("", con);
-
+                    plswait pw=new plswait();
+                    pw.Show();
+                    pw.Refresh();
                     cmd.CommandText = string.Format(
                         "UPDATE dbo.file_list " +
                         "SET solve_status = 'SOLVED', end_date = CURRENT_TIMESTAMP " +
@@ -357,10 +346,10 @@ namespace NU_Solver
                         username, filename);
                     
                     if (cmd.ExecuteNonQuery() == 0)
-                        throw new Exception("DB Update failed");
-                    con.Close();
-                    con.Dispose();
-
+                        throw new Exception("Post or Finish not complete!!! DB Update failed!");
+                        con.Close();
+                        con.Dispose();
+                    pw.Close();
                     File_List fl = new File_List(username, caller);
                     fl.Show();
                     this.Hide();
@@ -418,12 +407,12 @@ namespace NU_Solver
         private string getError(int row)
         {
             esolve es=new esolve(filename, sub_code, username);
-            /***/
             return
                 
                 es.echeckExamCode(dataGridView1.Rows[row].Cells[3].Value.ToString()) +
                 es.echeckSubjectCode(dataGridView1.Rows[row].Cells[4].Value.ToString()) +
                 es.echeckRegi(dataGridView1.Rows[row].Cells[5].Value.ToString(), dataGridView1.Rows[row].Cells[4].Value.ToString()) +
+                es.eDupRegCheck(dataGridView1.Rows[row].Cells[4].Value.ToString())+
                 es.echeckLitho(dataGridView1.Rows[row].Cells[6].Value.ToString(),
                             dataGridView1.Rows[row].Cells[7].Value.ToString(),
                             dataGridView1.Rows[row].Cells[8].Value.ToString(),
@@ -693,6 +682,10 @@ namespace NU_Solver
         private void btnFinishPost_Click(object sender, EventArgs e)
         {
             finish();
+
+            esolve es = new esolve();
+            es.ePost(filename, sub_code, username);
+            
             //e.Handled = true;
         }
 
@@ -707,6 +700,8 @@ namespace NU_Solver
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             esolve es = new esolve(filename, sub_code);
+            es.DupUNSET(sub_code, filename);
+            dataGridView1.Refresh();
             es.eDupRegi(sub_code);
             //File_List caller;
             dt.Rows.Clear();

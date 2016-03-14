@@ -366,7 +366,7 @@ namespace NU_Solver
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(135, 34);
             this.btnRefresh.TabIndex = 20;
-            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Text = "Err Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
@@ -404,6 +404,7 @@ namespace NU_Solver
             this.Text = "E_solve";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.onSolveWindowClosed);
+            this.Load += new System.EventHandler(this.btnRefresh_Click);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
